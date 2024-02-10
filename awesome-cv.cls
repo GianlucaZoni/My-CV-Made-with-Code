@@ -94,7 +94,7 @@
 %-------------------------------------------------------------------------------
 %% Page Layout
 % Configure page margins with geometry
-\geometry{left=2.0cm, top=2.0cm, right=2.0cm, bottom=2.0cm, footskip=.5cm}
+\geometry{left=2.0cm, top=2.0cm, right=2.5cm, bottom=1.5cm, footskip=.5cm}
 
 %% Header & Footer
 % Set offset to each header and footer
@@ -153,22 +153,22 @@
 %-------------------------------------------------------------------------------
 % Set the FontAwesome font to be up-to-date.
 \setfontfamily\FA[Path=\@fontdir]{FontAwesome}
-% Set font for header (default is Roboto)
+% Set font for header
 \newfontfamily\headerfont[
   Path=\@fontdir,
-  UprightFont=*-Regular,
-  ItalicFont=*-Italic,
-  BoldFont=*-Bold,
-  BoldItalicFont=*-BoldItalic,
-]{Roboto}
+  UprightFont=*-Leicht,
+  %ItalicFont=*-Italic,
+  BoldFont=*-Halbfett,
+  %BoldItalicFont=*-BoldItalic,
+]{Sohne}
 
 \newfontfamily\headerfontlight[
   Path=\@fontdir,
-  UprightFont=*-Thin,
-  ItalicFont=*-ThinItalic,
-  BoldFont=*-Medium,
-  BoldItalicFont=*-MediumItalic,
-]{Roboto}
+  UprightFont=*-Leicht,
+  %ItalicFont=*-ThinItalic,
+  BoldFont=*-Kraftig,
+  %BoldItalicFont=*-MediumItalic,
+]{Sohne}
 
 \newcommand*{\footerfont}{\sourcesanspro}
 \newcommand*{\bodyfont}{\sourcesanspro}
@@ -371,7 +371,7 @@
 \newcommand{\acvHeaderAfterQuoteSkip}{10mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{3mm}
+\newcommand{\acvSectionTopSkip}{1mm}
 \newcommand{\acvSectionContentTopSkip}{2.5mm}
 
 
@@ -406,7 +406,7 @@
         {\def\@photoborder{darkgray}}%
         {\def\@photoborder{none}}%
       \begin{tikzpicture}%
-        \node[\@photoshape, draw=\@photoborder, line width=0.3mm, inner sep=\photodim, fill overzoom image=\@photo] () {};
+        \node[\@photoshape, draw=\@photoborder, line width=0.25mm, inner sep=\photodim, fill overzoom image=\@photo] () {};
       \end{tikzpicture}
     }%
   }
@@ -560,7 +560,7 @@
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
 \newcommand*{\cventry}[5]{%
-  \vspace{-2.0mm}
+  \vspace{-2.5mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
